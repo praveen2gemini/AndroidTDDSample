@@ -1,7 +1,7 @@
 package com.dpdlad.testdrivenpractice;
 
-import com.dpdlad.testdrivenpractice.presenter.LoginPresenter;
-import com.dpdlad.testdrivenpractice.presenter.LoginPresenterImpl;
+import com.dpdlad.testdrivenpractice.login.presenter.LoginPresenter;
+import com.dpdlad.testdrivenpractice.login.presenter.LoginPresenterImpl;
 
 import org.junit.Assert;
 import org.junit.Test;

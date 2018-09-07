@@ -1,5 +1,6 @@
-package com.dpdlad.testdrivenpractice;
+package com.dpdlad.testdrivenpractice.login;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,8 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.dpdlad.testdrivenpractice.presenter.LoginPresenter;
-import com.dpdlad.testdrivenpractice.presenter.LoginPresenterImpl;
+import com.dpdlad.testdrivenpractice.R;
+import com.dpdlad.testdrivenpractice.brands.MobileBrandListActivity;
+import com.dpdlad.testdrivenpractice.login.presenter.LoginPresenter;
+import com.dpdlad.testdrivenpractice.login.presenter.LoginPresenterImpl;
 
 public class LoginActivity extends AppCompatActivity implements LoginPresenter.LoginViewNotifier {
 
@@ -56,5 +59,6 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.L
     @Override
     public void showLoginSuccessMessage() {
         Snackbar.make(btnLogin, "Login successful.", Snackbar.LENGTH_LONG).show();
+        startActivity(new Intent(this, MobileBrandListActivity.class));
     }
 }

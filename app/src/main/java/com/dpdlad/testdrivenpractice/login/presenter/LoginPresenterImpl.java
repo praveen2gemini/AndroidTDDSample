@@ -1,4 +1,4 @@
-package com.dpdlad.testdrivenpractice.presenter;
+package com.dpdlad.testdrivenpractice.login.presenter;
 
 import android.support.annotation.NonNull;
 

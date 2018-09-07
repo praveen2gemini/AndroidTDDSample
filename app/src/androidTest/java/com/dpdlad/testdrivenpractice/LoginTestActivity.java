@@ -4,8 +4,9 @@ import android.content.Intent;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.dpdlad.testdrivenpractice.presenter.LoginPresenter;
-import com.dpdlad.testdrivenpractice.presenter.LoginPresenterImpl;
+import com.dpdlad.testdrivenpractice.login.LoginActivity;
+import com.dpdlad.testdrivenpractice.login.presenter.LoginPresenter;
+import com.dpdlad.testdrivenpractice.login.presenter.LoginPresenterImpl;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -60,11 +61,10 @@ public class LoginTestActivity {
 
 
     @Test
-    public void checkLoginSuccess()
-    {
+    public void checkLoginSuccess() {
         activityTestRule.launchActivity(new Intent());
-        onView(withId(R.id.edt_user_name)).perform(typeText("test"),closeSoftKeyboard());
-        onView(withId(R.id.edt_password)).perform(typeText("test"),closeSoftKeyboard());
+        onView(withId(R.id.edt_user_name)).perform(typeText("test"), closeSoftKeyboard());
+        onView(withId(R.id.edt_password)).perform(typeText("test"), closeSoftKeyboard());
         onView(withId(R.id.btn_login)).check(matches(isDisplayed())).perform(click());
         onView(withText("Login successful.")).check(matches(isDisplayed()));
     }
